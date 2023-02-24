@@ -1,0 +1,40 @@
+package Mixmethods;
+
+public class allmethods 
+{
+	public static void main(String[] args)
+	{
+		//static regular method v1 call from same class
+		v1();												//methodname();
+		
+		// Non static regular method call from same class
+		
+		//step-1= create object of same class means create a object of that class in which non static method is present
+		 allmethods k1=new allmethods();
+		 
+		 //step-2= call the method
+		 k1.v2();											//objectname.methodname();
+		 
+		 //static regular method call from different class
+		 	allmethods1.v3();								//classname.methodname();
+		 	
+		 //Non static method call from different class
+		 	//Step-1= Create a object of different class means create a object of that class in which non static method is present
+		 	allmethods1 k2=new allmethods1();
+		 	
+		 	//step-2= call the method
+		 	k2.v4();
+		
+	}
+	//static regular method
+	public static void v1()
+	{
+		System.out.println(" Static method v1 is running from same class.");
+	}
+	
+	//non static regular method
+	public void v2()
+	{
+		System.out.println("Non static method v2 is running from same class.");
+	}
+}
